@@ -393,15 +393,18 @@
       </div>
     </div>
 
-    <script>
-      // Auto-update copyright year
-      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    <!-- Auto-update copyright year -->
+    <script src="scripts.js"></script>
 
+    <script>
       // Open modals
-      document.getElementById("privacy-link").onclick = function (e) {
-        e.preventDefault();
-        document.getElementById("privacy-modal").style.display = "block";
-      };
+      var privacyLink = document.getElementById("privacy-link");
+      if (privacyLink) {
+        privacyLink.onclick = function (e) {
+          e.preventDefault();
+          document.getElementById("privacy-modal").style.display = "block";
+        };
+      }
       // Close modals
       document.querySelectorAll(".close").forEach(function (btn) {
         btn.onclick = function () {
