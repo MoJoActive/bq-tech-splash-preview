@@ -360,7 +360,7 @@
         </div>
       </div>
       <div class="footer-legal">
-        © BQ Technologies LLC. 2025 All rights reserved.
+        © BQ Technologies LLC. <span id="copyright-year">2025</span> All rights reserved.
         <br class="footer-legal-spacer-mobile" />
         <a
           href="https://www.q-card.com/about-us/privacy-policy/page.aspx?id=2307"
@@ -394,6 +394,9 @@
     </div>
 
     <script>
+      // Auto-update copyright year
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
       // Open modals
       document.getElementById("privacy-link").onclick = function (e) {
         e.preventDefault();
