@@ -1,3 +1,4 @@
+
 // Auto-update copyright year
 (function () {
   var yearEl = document.getElementById("copyright-year");
